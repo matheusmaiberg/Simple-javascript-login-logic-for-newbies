@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="style.css">
+<div class="container">
+  <h1 class="centered-text">Hi <%= name %></h1>
+  <div class="gif-container">
+    <img id="randomImage" src="" alt="dog" style="width: 300px; height: 300px;">
+  </div>
+  <form action="/logout" method="post" class="centered-text">
+    <button type="submit">Logout</button>
+  </form>
+</div>
+
+<!-- Random dog selector for index page -->
+<script>
+  window.onload = function() {
+    const images = [
+      'https://media.giphy.com/media/kiBcwEXegBTACmVOnE/giphy-downsized-large.gif',
+      'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGcxZ3V3cmh2dTh6aW96amVwcXI1YmFoa2Y1OGdtdG4zdnV1NDgwdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gFW9rRpOkMRBY2KF6s/giphy.gif',
+      'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjYzdG93azllaHFqazlyM2ZldTR1OWk5eHloMTBkcnFjemk1ZGlxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QvBoMEcQ7DQXK/giphy.gif',
+      'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWM3eHpwMTBrc2t4ajJnNjFvOHE1ZG9ndTlkbmNyOW9nc3JydGV6aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DWMnvMpjj1m2A/giphy.gif',
+      'https://media.giphy.com/media/18trqWNZnu33q/giphy.gif'
+    ];
+
+    let randomImage = images[Math.floor(Math.random() * images.length)];
+    document.getElementById('randomImage').src = randomImage;
+  };
+</script>

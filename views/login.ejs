@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="style.css">
+<div class="header">
+  <h1>Login on supersimple</h1>
+  <p>Register a user and enter the supersimple login application for you to reveal an dog GIF making dog things!</p>
+</div>
+<div class="form">
+  <form action='/login' method="post">
+    <div class="inputs">
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" required>
+      <label for="password">Password</label>
+      <input type="text" name="password" id="password" required>
+    </div>
+    <button type="submit">Login</button>
+    <a href="/register">Register</a>
+  </form>
+</div>
+<div class="error">
+  <% if (messages.error) { %>
+    <%= messages.error %>
+    <% } %>
+</div>

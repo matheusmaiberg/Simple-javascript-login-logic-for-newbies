@@ -40,6 +40,11 @@ npm start
 
 After starting the server, access http://localhost:4000 in your browser to see the application running. Replace PORT in the .env with the port your server is running on if you want to run in a different port.
 
+License
+MIT
 
+Contact
+Matheus Maiberg
+Email: matheus.almeida@live.com
 
 
